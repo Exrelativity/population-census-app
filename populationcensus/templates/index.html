@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pupulation Census</title>
+    <link rel="stylesheet" href="./templates/assets/css/stylesheet.css">
+</head>
+<body>
+  <div>
+    <h1>General Population List</h1>
+    <p>
+      <a href="add/">add a member</a>
+    </p>
+    <table border="1">
+        <tr>
+            <td> ID </td>
+            <td> Firstname </td>
+            <td> Lastname </td>
+            <td> Age </td>
+            <td> Gender </td>
+            <td> Delete</td>
+        </tr>
+
+        {% for x in mypopulationcensus %}
+        <tr>
+            <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.age }}</td>
+            <td>{{ x.gender }}</td>
+            <td><a href="delete/{{ x.id }}">delete</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <p>
+        <a href="add/">add a member</a>
+    </p>
+</div>
+<div>
+  {% for x in gradeA %}
+  <h2>Adult Male from 30 to 70 years old</h2>
+  <table border="1">
+  <tr>
+      <td> ID </td>
+      <td> Firstname </td>
+      <td> Lastname </td>
+      <td> Age </td>
+      <td> Gender </td>
+      <td>Delete</td>
+  </tr>
+        <tr>
+            <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.age }}</td>
+            <td>{{ x.gender }}</td>
+            <td><a href="delete/{{ x.id }}">delete</a></td>
+        </tr>  
+    </table>
+    {% endfor %}
+  </div>
+  <div>
+    {% for x in gradeB %}
+    <h2>Adult Female from 30 to 70 years old</h2>
+        <table border="1">
+          <tr>
+        <td> ID </td>
+        <td> Firstname </td>
+        <td> Lastname </td>
+        <td> Age </td>
+        <td> Gender </td>
+        <td>Delete</td>
+        </tr>
+        <tr>
+              <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+              <td>{{ x.firstname }}</td>
+              <td>{{ x.lastname }}</td>
+              <td>{{ x.age }}</td>
+              <td>{{ x.gender }}</td>
+              <td><a href="delete/{{ x.id }}">delete</a></td>
+        </tr>
+      </table>
+      {% endfor %}
+    </div>
+    <div>
+      {% for x in gradeC %}
+      <h2>Youth Male from 18 to 29 years old</h2>
+      <table border="1">
+          <tr>
+              <td> ID </td>
+              <td> Firstname </td>
+              <td> Lastname </td>
+              <td> Age </td>
+              <td> Gender </td>
+              <td>Delete</td>
+          </tr>
+            <tr>
+                <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+                <td>{{ x.age }}</td>
+                <td>{{ x.gender }}</td>
+                <td><a href="delete/{{ x.id }}">delete</a></td>
+            </tr>
+      </table>
+      {% endfor %}
+      </div>
+      <div>
+        {% for x in gradeD %}
+          <h2>Youth Female from 18 to 29 years old</h2>
+            <table border="1">
+              <tr>
+              <td> ID </td>
+              <td> Firstname </td>
+              <td> Lastname </td>
+              <td> Age </td>
+              <td> Gender </td>
+              <td>Delete</td>
+              </tr>
+              <tr>
+                  <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                  <td>{{ x.firstname }}</td>
+                  <td>{{ x.lastname }}</td>
+                  <td>{{ x.age }}</td>
+                  <td>{{ x.gender }}</td>
+                  <td><a href="delete/{{ x.id }}">delete</a></td>
+              </tr>
+           </table>
+          {% endfor %}
+        </div>
+        <div>
+          {% for x in gradeE %}
+            <h2>Boys from 0 to 17 years old</h2>
+            <table border="1">
+                <tr>
+                <td> ID </td>
+                <td> Firstname </td>
+                <td> Lastname </td>
+                <td> Age </td>
+                <td> Gender </td>
+                <td>Delete</td>
+                </tr>
+                     <tr>
+                    <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                    <td>{{ x.firstname }}</td>
+                    <td>{{ x.lastname }}</td>
+                    <td>{{ x.age }}</td>
+                    <td>{{ x.gender }}</td>
+                    <td><a href="delete/{{ x.id }}">delete</a></td>
+                    </tr>
+              </table>
+            {% endfor %}
+          </div>
+          <div>
+            {% for x in gradeF %}
+              <h2>Girls from 0 to 17 years old</h2>
+               <table border="1">
+                <tr>
+                <td> ID </td>
+                <td> Firstname </td>
+                <td> Lastname </td>
+                <td> Age </td>
+                <td> Gender </td>
+                <td> Delete</td>
+                </tr>
+                  <tr>
+                      <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                      <td>{{ x.firstname }}</td>
+                      <td>{{ x.lastname }}</td>
+                      <td>{{ x.age }}</td>
+                      <td>{{ x.gender }}</td>
+                      <td><a href="delete/{{ x.id }}">delete</a></td>
+                  </tr>              
+               </table>
+              {% endfor %}
+            </div>
+</body>
+</html>

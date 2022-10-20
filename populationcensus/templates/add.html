@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Census</title>
+    <link rel="stylesheet" href="./templates/assets/css/stylesheet.css">
+</head>
+<body>
+    <h1>Add Members</h1>
+    <form action="addrecord/" method="post">
+        {% csrf_token %}
+        First Name : <br>
+        <input required name="firstname"  type="text" value="">
+        <br><br>
+        Last Name : <br>
+        <input required name="lastname" type="text" value="">
+        <br><br>
+        Age : <br>
+        <input required name="age" type="number" value="">
+        <br><br>
+        Gender : <br>
+        <input required name="gender" type="text" value="">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <br>
+    <a href="/populationcensus">Back</a>
+    <a href="/populationcensus">View</a>
+</body>
+</html>
