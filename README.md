@@ -1,4 +1,4 @@
-# Simple Population Census App  
+# Population Census App  
 
 ## Requirement
 Python 3.8
