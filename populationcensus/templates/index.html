@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
+  {% load bootstrap5 %}
+
+  {% bootstrap_css %}
+
+  {% bootstrap_javascript %}
+
+  {% bootstrap_messages %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pupulation Census</title>
-    <link rel="stylesheet" href="./templates/assets/css/stylesheet.css">
+    <link rel="stylesheet" href="{% static 'styles/index.css'%}">  
 </head>
-<body>
+<body class="bg-info">
   <div>
-    <h1>General Population List</h1>
-    <p>
-      <a href="add/">add a member</a>
+    <p class="container">
+      <a href="/populationcensus/add" class="mt-4">add a member</a>
     </p>
-    <table border="1">
+    <h1 id="h1-in">General Population List</h1>
+    <table class="table table-hover mb-5">
         <tr>
             <td> ID </td>
             <td> Firstname </td>
@@ -35,14 +43,14 @@
         {% endfor %}
 
     </table>
-    <p>
+    <!-- <p>
         <a href="add/">add a member</a>
-    </p>
+    </p> -->
 </div>
 <div>
   {% for x in gradeA %}
-  <h2>Adult Male from 30 to 70 years old</h2>
-  <table border="1">
+  <h2 id="h1-in">Adult Male from 30 to 70 years old</h2>
+  <table class="table table-hover mb-5">
   <tr>
       <td> ID </td>
       <td> Firstname </td>
@@ -64,8 +72,8 @@
   </div>
   <div>
     {% for x in gradeB %}
-    <h2>Adult Female from 30 to 70 years old</h2>
-        <table border="1">
+    <h2 id="h1-in">Adult Female from 30 to 70 years old</h2>
+        <table class="table table-hover mb-5">
           <tr>
         <td> ID </td>
         <td> Firstname </td>
@@ -87,8 +95,8 @@
     </div>
     <div>
       {% for x in gradeC %}
-      <h2>Youth Male from 18 to 29 years old</h2>
-      <table border="1">
+      <h2 id="h1-in">Youth Male from 18 to 29 years old</h2>
+      <table class="table table-hover mb-5">
           <tr>
               <td> ID </td>
               <td> Firstname </td>
@@ -110,8 +118,8 @@
       </div>
       <div>
         {% for x in gradeD %}
-          <h2>Youth Female from 18 to 29 years old</h2>
-            <table border="1">
+          <h2 id="h1-in">Youth Female from 18 to 29 years old</h2>
+            <table class="table table-hover mb-5">
               <tr>
               <td> ID </td>
               <td> Firstname </td>
@@ -133,8 +141,8 @@
         </div>
         <div>
           {% for x in gradeE %}
-            <h2>Boys from 0 to 17 years old</h2>
-            <table border="1">
+            <h2 id="h1-in">Boys from 0 to 17 years old</h2>
+            <table class="table table-hover mb-5">
                 <tr>
                 <td> ID </td>
                 <td> Firstname </td>
@@ -156,8 +164,8 @@
           </div>
           <div>
             {% for x in gradeF %}
-              <h2>Girls from 0 to 17 years old</h2>
-               <table border="1">
+              <h2 id="h1-in">Girls from 0 to 17 years old</h2>
+               <table class="table table-hover mb-5">
                 <tr>
                 <td> ID </td>
                 <td> Firstname </td>

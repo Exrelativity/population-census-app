@@ -8,6 +8,12 @@ from django.urls import reverse
 from django.db.models import Q
 from .forms import censusRegistrationAndUpdateForm
 
+
+def welcome(request):
+    template = loader.get_template('welcome.html')
+    return HttpResponse(template.render())
+
+
 def index(request):
     mypopulationcensus = Populationcensus.objects.all()
     gradeA = mypopulationcensus.filter(Q(age__gte = 30) & Q(gender__exact = "m"))
