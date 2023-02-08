@@ -4,7 +4,7 @@ This a web applictaion created using django framework, demostrating to a minimum
 
 ## Requirement
 
-Python 3.8 and basic knowledge of how to setup a react application
+Python 3.8 and basic knowledge of how to setup a django application
 
 
 ## Implementation
